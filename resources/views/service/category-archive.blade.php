@@ -1,5 +1,8 @@
 @extends('layouts.admin')
-@section('title', 'トップページ')
+
+@if (isset($keyword))
+    @section('title', $keyword)
+@endif
 
 @section('content')
 
