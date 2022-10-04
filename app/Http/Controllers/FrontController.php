@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\RegisterMail;
 
 class FrontController extends Controller
 {
@@ -11,9 +13,9 @@ class FrontController extends Controller
         return view('toppage');
     }
     
-    public function about()
+    public function design()
     {
-        return view('about');
+        return view('design');
     }
     
     public function contact()
@@ -21,26 +23,43 @@ class FrontController extends Controller
         return view('contact');
     }
     
-    public function service()
+    public function coordinate()
     {
-        return view('service.archive');
+        return view('coordinate');
     }
     
-    public function suits()
+    public function confirm(Request $request)
     {
-        $keyword = "生地一覧";
-        return view('service.category-archive', ['keyword'=> $keyword]);
+        $form = $request->all();
+        return view('parts.confirm', ['form' => $form]);
     }
     
-    public function shirt()
+    public function thanks(Request $request)
     {
-        $keyword = "シャツ・ネクタイ一覧";
-        return view('service.category-archive', ['keyword'=> $keyword]);
+        $form = $request->all();
+        return view('parts.thanks', ['form => $form']);
+        
     }
     
-    public function post()
-    {
-        $keyword = "お客様作品例";
-        return view('service.category-archive', ['keyword'=> $keyword]);
-    }
+    // public function register(Request $request){
+    //     $name = $request['name'];
+        
+    //     Mail::send(new RegisterMail($name));
+        
+    //     return view('contact');
+    // }
+    
+    // public function __construct($name)
+    // {
+    //     $this->name = $name;
+    // }
+    
+    // public function build()
+    // {
+    //     return $this->to('exampleAddress@mail.jp')  // 送信先アドレス
+    //         ->subject('お問合せ内容 ')// 件名
+    //         ->view('registers.register_mail')// 本文
+    //         ->with(['name' => $this->name]);// 本文に送る値
+    // }
+        
 }

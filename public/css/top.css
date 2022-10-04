@@ -1,0 +1,121 @@
+
+img {
+    display: inline;
+    height: auto;
+    max-width: 90%;
+}
+
+.imgtext-container {
+    display: flex;
+    align-items: center;
+}
+
+.imgtext-container > .text {
+    flex: 1;
+}
+
+.imgtext-container > .img {
+    flex: 1;
+}
+
+.imgtext {
+    padding: 90px 10px 80px;
+}
+
+.orderflow {
+    padding: 20px 150px;
+    text-align: center;
+    background-color: #F6EEE7;
+    color: #000;
+}
+
+.heading {
+    position: relative;
+    display: inline-block;
+    color: #000;
+}
+
+listimg {
+    display: block;
+    max-width: 90%;
+    height: auto;
+}
+
+.heading::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-bottom: 1px solid #999;
+}
+
+.listtext-container {
+    display: flex;
+    align-items: center;
+}
+
+.listtext-container > .list {
+    flex: 1;
+}
+
+.listtext-container > .listimg {
+    flex: 1;
+}
+
+h1 {
+    display:inline-block;
+    position: relative;
+    color: #F6EEE7;
+    font-size: 40px;
+    font-family: "Baskerville";
+    border-bottom: 3px solid #999;
+}
+
+h1::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  display: inline-block;
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%); /*位置調整*/
+  background-color: #999; /*下線の色*/
+}
+
+h1:first-letter {
+  font-size: 150%;
+  color: #4e454a;
+}
+
+h2 {
+    font-family: "Sawarabi Mincho"; 
+    text-shadow: 1px 1px 2px #999;
+}
+
+p {
+    font-family: "Sawarabi Mincho"; 
+}
+
+#splash {
+    /*fixedで全面に固定*/
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	height: 100%;
+	background:#333;
+	text-align:center;
+	color:#fff;
+}
+
+/* Loadingバー中央配置　*/
+#splash_text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    z-index: 999;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+}

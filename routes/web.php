@@ -24,10 +24,8 @@ Route::group(['prefix' => 'admin'], function() {
 });
 
 Route::get('/','FrontController@index');
-Route::get('/about','FrontController@about');
+Route::get('/design','FrontController@design');
 Route::get('/contact','FrontController@contact');
-Route::get('/service','FrontController@service');
-Route::get('/service/suits','FrontController@suits');
-Route::get('/service/shirt-tie','FrontController@shirt');
-Route::get('/service/post','FrontController@post');
-
+Route::get('/coordinate','FrontController@coordinate');
+Route::post('/confirm','FrontController@confirm');
+Route::post('/thanks','FrontController@thanks');

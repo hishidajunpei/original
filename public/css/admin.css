@@ -1,0 +1,54 @@
+body {
+  background-repeat: no-repeat;
+  background-position: center;
+  background: -moz-radial-gradient(#921d29, #2F0307); 
+  background: -webkit-radial-gradient(#921d29, #2F0307); 
+  background: radial-gradient(#921d29, #2F0307);
+  color: #F6EEE7;
+}
+
+.navbar-laravel {
+  background-color: #000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-brand {
+  color: #fff !important;
+}
+
+.nav-link {
+  color: #fff !important;
+}
+
+.table-dark {
+  color: #fff;
+}
+
+.list-group-item {
+  border-color: #fff;
+  background-color: #000;
+}
+
+.login-box {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.login-header {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.login-body {
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.scroll-up {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(50px);
+  transition: all 2s;
+}
+.scroll-up.is-show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0px);
+}
